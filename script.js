@@ -19,6 +19,7 @@ class TeaTracker {
         this.addUnfinishedBtn = document.getElementById('add-unfinished');
         this.removeFinishedBtn = document.getElementById('remove-finished');
         this.removeUnfinishedBtn = document.getElementById('remove-unfinished');
+        this.moodEmoji = document.getElementById('mood-emoji');
     }
 
     addEventListeners() {
@@ -42,12 +43,21 @@ class TeaTracker {
         this.finishedCount.textContent = this.finished;
         this.unfinishedCount.textContent = this.unfinished;
         this.totalCount.textContent = this.finished + this.unfinished;
+        this.updateMoodEmoji();
         this.currentDate.textContent = new Date().toLocaleDateString('en-US', {
             weekday: 'long',
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         });
+    }
+
+    updateMoodEmoji() {
+        if (this.finished >= this.unfinished) {
+            this.moodEmoji.textContent = '🥰';
+        } else {
+            this.moodEmoji.textContent = '🫠';
+        }
     }
 
     checkForDayChange() {
