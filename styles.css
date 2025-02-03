@@ -11,6 +11,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 .container {
@@ -136,25 +137,42 @@ body {
 }
 
 @media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        padding: 2rem;
+    }
+
+    .container {
+        padding: 2rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
     .stats-container {
         grid-template-columns: 1fr;
-    }
-    
-    .container {
-        padding: 1.5rem;
-    }
-    
-    .stat-card {
-        padding: 1.25rem;
+        gap: 1rem;
     }
     
     .tea-cup {
-        top: -25px;
-        right: -35px;
+        top: -20px;
+        right: -20px;
     }
     
     .tea-cup svg {
         width: 120px;
         height: 60px;
+    }
+
+    .title h1 {
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+    }
+
+    .date-display {
+        margin-bottom: 2rem;
+    }
+
+    .date-display h2 {
+        font-size: 1.2rem;
     }
 } 
