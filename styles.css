@@ -45,7 +45,7 @@ body {
 .stats-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -61,6 +61,7 @@ body {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.08);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    min-width: 0;
 }
 
 .stat-card:hover {
@@ -74,6 +75,7 @@ body {
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .stat-card p {
