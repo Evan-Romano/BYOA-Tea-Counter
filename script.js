@@ -20,6 +20,7 @@ class TeaTracker {
         this.removeFinishedBtn = document.getElementById('remove-finished');
         this.removeUnfinishedBtn = document.getElementById('remove-unfinished');
         this.moodEmoji = document.getElementById('mood-emoji');
+        this.updateMoodEmoji();
     }
 
     addEventListeners() {
@@ -53,10 +54,12 @@ class TeaTracker {
     }
 
     updateMoodEmoji() {
+        if (!this.moodEmoji) return;
+        
         if (this.finished >= this.unfinished) {
-            this.moodEmoji.textContent = '🥰';
+            this.moodEmoji.innerHTML = '&#129392;';
         } else {
-            this.moodEmoji.textContent = '🫠';
+            this.moodEmoji.innerHTML = '&#129760;';
         }
     }
 
@@ -93,6 +96,7 @@ class TeaTracker {
             this.finished = data.finished;
             this.unfinished = data.unfinished;
             this.lastResetDate = data.lastResetDate;
+            this.updateMoodEmoji();
         }
     }
 
