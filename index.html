@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayle's Tea Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="tea-cup">
+            <svg width="150" height="75" viewBox="0 0 100 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Cup body -->
+                <path d="M35 25 C35 40, 65 40, 65 25 L63 18 C63 15, 37 15, 37 18 L35 25" fill="#ff87b0"/>
+                <!-- Saucer -->
+                <path d="M25 30 C25 45, 75 45, 75 30" stroke="#ff87b0" stroke-width="3" fill="none"/>
+                <!-- Handle -->
+                <path d="M63 22 C73 22, 73 18, 63 18" stroke="#ff87b0" stroke-width="3" fill="none"/>
+                <!-- Steam swirls -->
+                <path d="M42 5 C47 0, 37 7, 42 10 M50 0 C55 -5, 45 5, 50 7 M58 5 C63 0, 53 7, 58 10" 
+                      stroke="#ff87b0" stroke-width="2" fill="none"/>
+                <!-- Decorative swirls on cup -->
+                <path d="M42 20 Q48 18, 42 22 Q36 24, 42 27" stroke="#fff" stroke-width="2" fill="none"/>
+                <path d="M58 20 Q64 18, 58 22 Q52 24, 58 27" stroke="#fff" stroke-width="2" fill="none"/>
+                <circle cx="45" cy="21" r="1" fill="#fff"/>
+                <circle cx="55" cy="21" r="1" fill="#fff"/>
+            </svg>
+        </div>
+        <div class="title">
+            <h1>Haylè's Tea Tracker</h1>
+        </div>
+        <div class="date-display">
+            <h2 id="current-date"></h2>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Finished Teas</h3>
+                <p id="finished-count">0</p>
+                <div class="counter-controls">
+                    <button class="counter-btn" id="remove-finished">-</button>
+                    <button class="counter-btn" id="add-finished">+</button>
+                </div>
+            </div>
+            <div class="stat-card">
+                <h3>Unfinished Teas</h3>
+                <p id="unfinished-count">0</p>
+                <div class="counter-controls">
+                    <button class="counter-btn" id="remove-unfinished">-</button>
+                    <button class="counter-btn" id="add-unfinished">+</button>
+                </div>
+            </div>
+            <div class="stat-card">
+                <h3>Total Teas</h3>
+                <p id="total-count">0</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
